@@ -17,9 +17,9 @@ exports.getPoem = async (req, res) => {
         const response = await openai.createCompletion({
             model: "text-davinci-002",
             prompt: generatePrompt(req.body.expression),
-            temperature: 0.7,
+            temperature: 0.9,
             max_tokens: 500,
-            top_p: 0.6,
+            // top_p: 0.6,
             frequency_penalty: 0,
             presence_penalty: 0,
         });
